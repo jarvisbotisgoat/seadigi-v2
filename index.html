@@ -1,28 +1,35 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-export default [
-  { ignores: ['dist'] },
-  {
-    files: ['**/*.{js,jsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        ecmaFeatures: { jsx: true },
-        sourceType: 'module',
-      },
-    },
-    plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
-    rules: {
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-    },
-  },
-]
+    <title>Seatown Digital — Digital Growth Agency · Seattle, WA</title>
+    <meta
+      name="description"
+      content="Seatown Digital builds websites, apps, content systems, and lead generation infrastructure for local businesses and real estate professionals in the Pacific Northwest."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Seatown Digital" />
+    <meta property="og:title" content="Seatown Digital — Digital Growth Agency · Seattle, WA" />
+    <meta
+      property="og:description"
+      content="Websites, apps, content, and lead systems for local businesses in the Pacific Northwest."
+    />
+    <meta property="og:url" content="https://seatowndigital.com" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Seatown Digital" />
+    <meta name="twitter:description" content="Digital growth agency based in Seattle, WA." />
+
+    <link rel="canonical" href="https://seatowndigital.com" />
+    <meta name="theme-color" content="#06080F" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
